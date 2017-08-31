@@ -1,0 +1,26 @@
+spring:
+    application:
+        name: config-service
+    profiles:
+        active: dev,native
+    cloud:
+        config:
+            server:
+                git:
+                    uri: https://github.com/TheFlies/tangkinhgac-config.git
+                native:
+                    search-locations: file:./config
+                prefix: /config
+                bootstrap: true
+            failFast: true
+            # name of the config server's property source (file.yml) that we want to use
+            name: config-service
+            profile: dev # profile(s) of the property source
+            label: master # toggle to switch to a different version of the configuration as stored in git
+            # it can be set to any label, branch or commit of the config source git repository
+
+server.port: 8888
+
+info:
+    project:
+        version: #project.version#
