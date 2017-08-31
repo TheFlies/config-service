@@ -1,0 +1,7 @@
+spring.data.mongodb:
+  uri: mongodb://admin:qRxvxKSCzbA9@127.0.0.1:27017/admin
+  repositories.enabled: false
+
+spring.messages.cacheSeconds: 1
+
+logging.level.root: INFO
